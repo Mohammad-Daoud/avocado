@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avocado Restaurant</title>
+    <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <style>
+        /* Add your custom CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #71BF44;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #652D0B;
+            color: #fff;
+            text-align: center;
+            width: 100%;
+        }
+
+        ul {
+            text-align: right;
+            list-style-type: none;
+        }
+
+        img {
+            width: 100%; /* Set the width to 100% of the parent container (usually the page width) */
+            height: auto; /* Maintain the image's aspect ratio */
+        }
+
+        .menu-container {
+            width: 90%;
+            height: 100%;
+            margin: 10px auto;
+            padding: 20px;
+            background-color: #71BF44;
+            box-shadow: 0 0 10px rgb(101, 45, 11);
+            border-radius: 5px;
+        }
+
+        /* Add more CSS for styling your menu container here */
+
+        .menu-section {
+            margin-bottom: 10px;
+            border-radius: 30px;
+            font-family: sans-serif;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .menu-section-header {
+            padding: 15px;
+            background-color: #E0D11F;
+            color: #652D0B;
+            cursor: pointer;
+            user-select: none;
+            font-size: 22px;
+            border-radius: 10px;
+        }
+        
+        .menu-section-header:hover {
+            background-color: #652D0B;
+            color: #E0D11F;
+        }
+
+        .menu-section-content {
+            padding: 15px;
+            display: none;
+        }
+
+        .menu-section-content.show {
+            display: block;
+        }
+
+        .menu-section-content img {
+            padding: 0;
+            margin: 0;
+
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <img src="img/info.png" alt="header logo"/>
+</header>
+
+<div class="menu-container">
+    <!-- Section 1 -->
+    <div class="menu-section">
+        <div class="menu-section-header">العصائر والكوكتيل</div>
+        <div class="menu-section-content">
+            <img src="img/firstJuiceSection.png" alt="first juice section"/>
+            <img src="img/secondJuiceSection.png" alt="second juice section"/>
+            <img src="img/thirdJuiceSection.png" alt="third juice section"/>
+            <img src="img/forthJuiceSection.png" alt="forth juice section"/>
+            <img src="img/firstNote.png" alt="first juice note"/>
+            <img src="img/secondNote.png" alt="second juice note"/>
+        </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="menu-section">
+        <div class="menu-section-header">سندويشات البرجر</div>
+        <div class="menu-section-content">
+            <img src="img/firstBurgerSection.png" alt="burger section"/>
+            <img src="img/secondBurgerSection.png" alt="burger section"/>
+            <img src="img/thirdNote.png" alt="second juice note"/>
+            <img src="img/fothNote.png" alt="second juice note"/>
+
+
+            <!-- Insert your vector menu file here for Section 2 -->
+        </div>
+    </div>
+    <div class="menu-section">
+        <div class="menu-section-header">سندويشات صدر الدجاج</div>
+        <div class="menu-section-content">
+            <img src="img/firstBreastSection.png" alt="juice sec"/>
+            <img src="img/secondBreastSection.png" alt="juice sec"/>
+
+            <!-- Insert your vector menu file here for Section 2 -->
+        </div>
+    </div>
+    <div class="menu-section">
+        <div class="menu-section-header">سندويشات صدر الدجاج بالقرشلة</div>
+        <div class="menu-section-content">
+            <img src="img/firstCrispySection.png" alt="juice sec"/>
+            <img src="img/secondCrispySection.png" alt="juice sec"/>
+            <img src="img/comboOffer.png" alt="juice sec"/>
+
+
+            <!-- Insert your vector menu file here for Section 2 -->
+        </div>
+    </div>
+    <div class="menu-section">
+        <div class="menu-section-header">شاورما جريل</div>
+        <div class="menu-section-content">
+            <img src="img/firstShawermaSection.png" alt="shawerma section"/>
+            <img src="img/secondShawermaSection.png" alt="shawerma section"/>
+            <img src="img/shawermaNote.png" alt="shawerma note"/>
+
+
+            <!-- Insert your vector menu file here for Section 2 -->
+        </div>
+    </div>
+
+    <div class="menu-section">
+        <div class="menu-section-header">ساندويشات سـتيك و أكثر</div>
+        <div class="menu-section-content">
+         
+            <img src="img/firstSteakAndMoreSection.png" alt="Steak And More Section "/>
+            <img src="img/secondSteakAndMoreSection.png" alt="Steak And More Section "/>
+            <img src="img/thirdSteakAndMoreSection.png" alt="Steak And More Section "/>
+            <img src="img/healthySection.png" alt="Steak And More Section "/>
+
+
+
+            <!-- Insert your vector menu file here for Section 2 -->
+        </div>
+    </div>
+    <div class="menu-section">
+        <div class="menu-section-header">أخرى</div>
+        <div class="menu-section-content">
+            <img src="img/firstOthersSection.png" alt="others section"/>
+            <img src="img/secondOthersSection.png" alt="others section"/>
+            <img src="img/thirdOthersSection.png" alt="others section"/>
+
+
+            <!-- Insert your vector menu file here for Section 2 -->
+        </div>
+    </div>
+    <!-- Add more sections as needed -->
+
+</div>
+
+<script>
+    // Add JavaScript to make the accordion functionality
+    const sectionHeaders = document.querySelectorAll(".menu-section-header");
+
+    sectionHeaders.forEach(header => {
+        header.addEventListener("click", () => {
+            header.nextElementSibling.classList.toggle("show");
+        });
+    });
+</script>
+</body>
+</html>
